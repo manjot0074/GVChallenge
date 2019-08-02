@@ -2,6 +2,9 @@ public with sharing class CustomMetadataHelper {
     private static List<String> opportunityErrorStages;
     
     public static List<String> getOpportunityErrorStages() {
+        // This metadata helps customers to add more stage values for which opportunity cannot be deleted. 
+        // If they need Closed Won and Negotiation/Review both opportunity not be deleted, wihtout any change in code.
+        // They will just need to create a new metadata in org
         if(opportunityErrorStages != null){
             return opportunityErrorStages;
         }
