@@ -4,6 +4,6 @@ trigger OpportunityTrigger on Opportunity (before delete) {
         	OpportunityTriggerHelper.checkDeleteAllowed(Trigger.oldMap);  
         }
     } catch (exception e){
-        OpportunityTriggerHelper.updateErrorOnRecords(Trigger.new, e.getMessage());
+        OpportunityTriggerHelper.updateErrorOnRecords(Trigger.old, e.getMessage());
     }
 }
